@@ -2,51 +2,45 @@
 COLOUR PALETTE
 #32373B onyx
 #BCABAE rose quartz
-#8075FF medium slate blue
+ medium slate blue
 #E34A6F cerise
 #F36D8F cerise highlight
 #EDEBA0 vanilla
+#2c2a4a name
 */
+
+h2 {
+    color: #8A9BB1;
+    width: auto;
+    border-bottom: none;
+}
 
 .project-container {
     color: #2c2a4a;
-    max-width: 350px;
-    margin: 50px 8px;
+    max-width: 800px;
+    margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.project-container .repo-link img {
-    float: right;
-    width: 30px;
-    height: 30px;
-}
-
 .project-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     border-radius: 4px;
     margin-bottom: 20px;
 }
 
 .project-title {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.project-description {
+.project-description,
+.project-process,
+.project-reflection {
     font-size: 16px;
     margin-bottom: 20px;
 }
-
-/*.project-link {*/
-
-/*}*/
-
-/*.project-link:hover {*/
-/*    */
-/*}*/

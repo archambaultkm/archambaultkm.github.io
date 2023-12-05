@@ -11,14 +11,14 @@ body {
     margin: 0;
     height: 100%;
     background-size: cover;
-    background-color: #BCABAE;
+    background-color: #DAC7C9;
     font-family: 'Oswald', sans-serif;
 }
 
 /* Header styles */
 header {
     margin-top: 10px;
-    background-color: #EDEBA0;
+    background-color: #8A9BB1;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -54,13 +54,13 @@ header {
 }
 
 .nav-links a:hover {
-    color: #E34A6F; /* Change color on hover */
+    color: #E34A6F;
 }
 
 .nav-links img {
     width: 20px;
     height: 20px;
-    margin-left: 5px; /* Adjust spacing between text and image */
+    margin-left: 5px;
 }
 
 .portfolio {
