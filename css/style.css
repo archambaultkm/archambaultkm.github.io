@@ -84,3 +84,31 @@ h2 {
 span {
     margin: 0 5px 0 15px;
 }
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 4px;
+    background: #E34A6F;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button a {
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #F36D8F;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover a {
+    color: #ffffff;
+    text-decoration: none;
+}

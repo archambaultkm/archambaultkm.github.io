@@ -43,17 +43,10 @@ COLOUR PALETTE
     margin-bottom: 20px;
 }
 
-.project-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #E34A6F;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
+/*.project-link {*/
 
-.project-link:hover {
-    background-color: #F36D8F;
-}
+/*}*/
+
+/*.project-link:hover {*/
+/*    */
+/*}*/
