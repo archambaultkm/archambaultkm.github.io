@@ -42,7 +42,7 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-.landingcontainer {
+.landing-container {
     text-align: right;
 }
 
@@ -95,10 +95,11 @@ footer {
 footer * {
     display: inline;
 }
-.socialicons * {
+
+.social-icons * {
     display: inline;
 }
-.socialicons ul {
+.social-icons ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
