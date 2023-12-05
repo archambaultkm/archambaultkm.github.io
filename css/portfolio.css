@@ -9,8 +9,8 @@ COLOUR PALETTE
 */
 
 .project-container {
-    max-width: 500px;
-    margin: 50px auto;
+    max-width: 350px;
+    margin: 50px 8px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -24,8 +24,9 @@ COLOUR PALETTE
 }
 
 .project-image {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 4px;
     margin-bottom: 20px;
 }

@@ -112,3 +112,17 @@ button:hover a {
     color: #ffffff;
     text-decoration: none;
 }
+
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
