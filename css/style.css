@@ -7,8 +7,6 @@ COLOUR PALETTE
 #EDEBA0 vanilla
 */
 
-
-
 body {
     margin: 0;
     height: 100%;
@@ -17,29 +15,6 @@ body {
     background-color: #BCABAE;
     font-family: 'Oswald', sans-serif;
 }
-
-
-
-/*.indexButton {*/
-/*    background-color: #E34A6F;*/
-/*    color: #ffffff;*/
-/*    padding: 1%;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    font-size: 1.2em;*/
-/*    cursor: pointer;*/
-/*    transition: all 0.5s;*/
-/*}*/
-
-/*.indexButton a {*/
-/*    color: #ffffff;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*.indexButton:hover {*/
-/*    background-color: #EDEBA0;*/
-/*    color: #32373B;*/
-/*}*/
 
 /* Header styles */
 header {
@@ -87,24 +62,6 @@ header {
     margin-left: 5px; /* Adjust spacing between text and image */
 }
 
-.social-icons * {
-    display: inline;
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.social-icons ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.social-icons img {
-    width: 80px;
-    height: 80px;
-}
-
 .portfolio {
     display: flex;
     align-items: center;
@@ -112,20 +69,6 @@ header {
     padding: 20px 30px;
     max-width: calc(100vw - 40px);
     flex-direction: column;
-}
-
-.form {
-    width: 340px;
-    height: 440px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 40px -10px #32373B;
-    margin: calc(50vh - 220px) auto;
-    padding: 20px 30px;
-    max-width: calc(100vw - 40px);
-    box-sizing: border-box;
-    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
-    position: relative;
 }
 
 h2 {
@@ -136,56 +79,6 @@ h2 {
     border-bottom: 3px solid #BCABAE;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background: none;
-    outline: none;
-    resize: none;
-    border: 0;
-    font-family: 'Oswald', sans-serif;
-    transition: all 0.3s;
-    border-bottom: 2px solid #BCABAE;
-}
-
-input:focus {
-    border-bottom: 2px solid #32373B;
-}
-
-p:before {
-    content: attr(type);
-    display: block;
-    margin: 28px 0 0;
-    font-size: 14px;
-    color: #32373B;
-}
-
-button {
-    border-radius: 14px;
-    padding: 8px 12px;
-    margin: 8px 0 0;
-    font-family: 'Oswald', sans-serif;
-    border: 2px solid #BCABAE;
-    background: #E34A6F;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-button a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-button:hover {
-    background: #EDEBA0;
-    color: #32373B;
-}
-
-button a:hover {
-    color: #32373B;
-}
 
 span {
     margin: 0 5px 0 15px;

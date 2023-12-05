@@ -29,6 +29,24 @@
     height: 100vh;
 }
 
+.social-icons * {
+    display: inline;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.social-icons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.social-icons img {
+    width: 80px;
+    height: 80px;
+}
+
 .name {
     color: #2c2a4a;
     font-size: 5.5em;
