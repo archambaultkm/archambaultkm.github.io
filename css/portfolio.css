@@ -1,0 +1,59 @@
+/*
+COLOUR PALETTE
+#32373B onyx
+#BCABAE rose quartz
+#8075FF medium slate blue
+#E34A6F cerise
+#F36D8F cerise highlight
+#EDEBA0 vanilla
+*/
+
+.project-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-container .repo-link img {
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #E34A6F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #F36D8F;
+}
