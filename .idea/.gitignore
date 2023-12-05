@@ -1,0 +1,66 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Node.js
+node_modules/
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Compiled output
+dist/
+build/
+out/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.sass-cache/
+*.komodoproject
+.komodotools/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Compiled Java files
+*.class
+
+# Compiled Ruby files
+*.rbc
+
+# Compiled TypeScript files
+*.tsbuildinfo
+
+# Compiled Vue.js files
+/dist/
+
+# Compiled CSS files
+*.compiled.css
+
+# Bootstrap generated files
+/_config.yml
+/bootstrap-*
+/npm-debug.log*
+
+# JetBrains IDE
+.idea/
+
+# Sublime Text directories
+.svn/
