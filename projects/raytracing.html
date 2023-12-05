@@ -4,50 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
-    <title>Your Project Title</title>
+    <title>Ray Tracing in One Weekend</title>
 </head>
 
 <body>
-<header>
-    <nav class="nav-links">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../portfolio.html">Portfolio</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-            <li><a href = "https://github.com/archambaultkm"><img src="../img/github.png" alt="GitHub Icon" ></a></li>
-            <li><a href = "https://www.linkedin.com/in/kaitlyn-archambault-5385161b5/"><img src="../img/linkedin.png" alt="LinkedIn Icon" ></a></li>
-        </ul>
-    </nav>
-</header>
-<div class="project-container">
-    <img src="../img/raytracing-final-render.png" alt="Project Image" class="project-image">
-    <div class="project-title">Raytracing in One Weekend</div>
+    <header>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href = "https://github.com/archambaultkm"><img src="../img/github.png" alt="GitHub Icon" ></a></li>
+                <li><a href = "https://www.linkedin.com/in/kaitlyn-archambault-5385161b5/"><img src="../img/linkedin.png" alt="LinkedIn Icon" ></a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="project-description">
-        <h2>Project Description</h2>
-        <p>
-            This is a placeholder project description. Include purpose, goals, and key features.
-        </p>
+    <div class="project-container">
+        <img src="../img/raytracing-final-render.png" alt="Project Image" class="project-image">
+        <div class="project-title">Ray Tracing in One Weekend</div>
+
+        <div class="project-description">
+            <h2>Project Description</h2>
+            <p>
+                This project was based off of the textbook <a href = "https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> by Peter Shirley.
+                <br><br>
+                I started this project in my third week of learning the Rust programming language. This was meant to be an exercise to get more familiar with
+                Rust, try my hand at porting code from one language to another, and to learn some basics of ray tracing, a
+                computer graphics rendering technique that I’ve always found interesting.
+
+            </p>
+        </div>
+
+        <div class="project-process">
+            <h2>Project Process</h2>
+            <p>
+                I took a week to go through the book and port each chapter to Rust code. I really enjoyed getting to see progress with each chapter I got through:
+                what started as a blue-to-white gradient image eventually turned into multiple spheres of various materials and sizes. Here are a collection of screenshots I
+                took of my work:
+
+                First steps: generating a gradient white-to-blue sky background, communicate to the ray tracer the position of a sphere based on it’s center, display different colours across the
+                surface of the sphere based on its surface normal:
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/sky_scene.png" alt="sky image">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/sphere.png" alt="flat sphere">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene.png" alt="normal sphere">
+                    </div>
+                </div>
+            </div>
+            <p>
+                Then, I added a "ground" and an antialiasing effect by taking random samples nearby a generated pixel. Note that
+                I adjusted the base colours, but the gradient you see in both the sphere and the ground is still based on the surface normals
+                of the shape:
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="img-fluid project-image-sm" src="../img/ray-tracing/scene_chap6.png" alt="aliased sphere">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid project-image-sm" src="../img/ray-tracing/scene_chap8.png" alt="antialiased sphere">
+                    </div>
+                </div>
+            </div>
+            <p>
+                Adding a matte (Lambertian) material that can be applied to shapes, and noise reduction in the generated image. Now that
+                we have an actual material, the colour is whatever we want (I chose gray):
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap9.png" alt="matte">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap9-low_spp.png" alt="noisy">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap9-no_acne.png" alt="no shadow acne">
+                    </div>
+                </div>
+            </div>
+            <p>
+                Adding more materials: Metal (with adjustable reflectivity/fuzz!) and Glass, with more exciting colours:
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap10.png" alt="metal">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap10-fuzz.png" alt="glass">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap11-high_sample_count.png" alt="no shadow acne">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_11-hollow_glass.png" alt="no shadow acne">
+                    </div>
+                </div>
+            </div>
+            <p>
+                Positionable camera:
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap12_1.png" alt="camera1">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap12_2.png" alt="camera2">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap12_3.png" alt="camera3">
+                    </div>
+                </div>
+            </div>
+            <p>
+                And a final rendering:
+            </p>
+            <div class="final-result">
+            <img class="project-image" src="../img/ray-tracing/scene_1.png" alt="final">
+            </div>
+        </div>
+
+        <div class="project-reflection">
+            <h2>Project Reflection</h2>
+            <p>
+                I gained a solid understanding of the basic principles of ray tracing, including how rays are traced through a 3D scene, ray-object intersection
+                testing, and how to compute lighting interactions. I also got to learn some mathematical concepts related to computer graphics, such as vector
+                operations, transformations, and geometry in the context of ray tracing. The biggest challenge was reading the book in one programming language
+                and trying to implement it in another, but it really helped me feel more confident writing in Rust.
+            </p>
+        </div>
     </div>
-
-    <div class="project-process">
-        <h2>Project Process</h2>
-        <p>
-            Outline the steps and process followed during the project. Include challenges and how they were overcome.
-        </p>
-    </div>
-
-    <div class="project-reflection">
-        <h2>Project Reflection</h2>
-        <p>
-            Reflection on the overall project experience. Discuss what you learned, what you would do differently, and
-            any future improvements or extensions to the project.
-        </p>
-    </div>
-</div>
-
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

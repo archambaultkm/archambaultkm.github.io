@@ -32,6 +32,22 @@ h2 {
     margin-bottom: 20px;
 }
 
+.col-md-6, .final-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.project-image-sm {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 .project-title {
     font-size: 36px;
     font-weight: bold;
