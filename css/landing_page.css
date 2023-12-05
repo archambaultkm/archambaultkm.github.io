@@ -1,0 +1,44 @@
+.links * {
+    transition: all 0.5s;
+}
+
+.links li {
+    list-style-type: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #E34A6F;
+    font-size: 75px;
+    margin: 5px;
+}
+
+.links a:hover {
+    text-decoration: none;
+    color: #EDEBA0;
+}
+
+.landing-container {
+    text-align: right;
+}
+
+.landing-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.name {
+    color: #2c2a4a;
+    font-size: 5.5em;
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+}
+
+.description {
+    font-size: 3.5em;
+    font-family: 'Oswald', sans-serif;
+    margin: 5px 0;
+    font-weight: lighter;
+    color: #ffffff;
+}
