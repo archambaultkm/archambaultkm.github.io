@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <title>Kaitlyn Archambault</title>
+        <link rel="stylesheet" href="css/portfolio.css">
+        <title>Portfolio</title>
     </head>
     <body>
         <header>
@@ -18,16 +20,60 @@
                  </ul>
              </nav>
         </header>
-        
-        <main>
-            <div class="portfolio">
-                <h1> 
-                    Projects 
-                </h1>
-                <p>
-                    Check back soon!
-                </p>
+
+        <div class="container">
+            <div class="row h-100">
+                <div class="project-container">
+                    <img src="img/raytracing-final-render.png" alt="Raytracing in One Weekend Final Render" class="project-image">
+                    <div class="project-title">Ray Tracing in One Weekend</div>
+                    <div class="project-description">
+                        A Rust implementation of Peter Shirley's textbook of the same name.
+                    </div>
+                    <div class="project-skills">
+                        <strong>Skills Learned:</strong> 3D graphics and ray tracing, mathematics for computer graphics, file I/O in Rust, C++ to Rust conversion.
+                    </div>
+                    <div class="project-languages">
+                        <strong>Language(s):</strong> Rust.
+                    </div>
+                    <button><a href="projects/raytracing.html">Learn More</a></button>
+                    <a href = "https://github.com/archambaultkm/RustWorld" class="repo-link"> <img src="img/github.png" alt="GitHub Icon" ></a>
+                </div>
+
+                <div class="project-container">
+                    <img src="img/rustworld.png" alt="RustWorld image" class="project-image">
+                    <div class="project-title">Rustworld</div>
+                    <div class="project-description">
+                        A project to learn OpenGl and procedural generation "Minecraft" style.
+                    </div>
+                    <div class="project-skills">
+                        <strong>Skills Learned:</strong> OpenGL API, shader programming, Perlin noise generation, vector and matrix operations, 3D geometry, texture atlasing, camera control and movement.
+                    </div>
+                    <div class="project-languages">
+                        <strong>Language(s):</strong> Rust, GLSL.
+                    </div>
+                    <button><a href="projects/rustworld.html">Learn More</a></button>
+                    <a href = "https://github.com/archambaultkm/in1weekend" class="repo-link"><img src="img/github.png" alt="GitHub Icon" ></a>
+                </div>
+
+                <div class="project-container">
+                    <img src="img/rogueplanet-above-ground.png" alt="Ship with Enemies" class="project-image">
+                    <div class="project-title">Rogue Planet</div>
+                    <div class="project-description">
+                        Stranded on a strange planet, you collect resources to repair your ship and repel waves of hostile native creatures.
+                    </div>
+                    <div class="project-skills">
+                        <strong>Skills Learned:</strong> Teamwork, Game Development, Documentation and Communication, Version Control.
+                    </div>
+                    <div class="project-languages">
+                        <strong>Language(s):</strong> C#.
+                    </div>
+                    <button><a href="projects/rogueplanet.html">Learn More</a></button>
+                    <a href = "https://github.com/gumgaard-dev/rogue-planet" class="repo-link"><img src="img/github.png" alt="GitHub Icon" ></a>
+                </div>
+
             </div>
-        </main>
+        </div>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
+
