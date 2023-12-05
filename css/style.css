@@ -98,6 +98,8 @@ footer * {
 
 .social-icons * {
     display: inline;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 .social-icons ul {
@@ -105,6 +107,11 @@ footer * {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.social-icons img {
+    width: 80px;
+    height: 80px;
 }
 
 footer a {
