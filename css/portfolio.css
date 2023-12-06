@@ -8,14 +8,41 @@ COLOUR PALETTE
 #EDEBA0 vanilla
 */
 
-.project-container {
-    color: #2c2a4a;
-    max-width: 350px;
-    margin: 50px 8px;
-    background-color: #fff;
+.profile-introduction {
+    text-align: left;
     padding: 20px;
+    margin: 20px 25px;
+    font-size: 18px;
+    background: #FCFBEE;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+H3 {
+    color: #E34A6F;
+}
+.profile-introduction .container {
+    max-width: 100%;
+}
+
+.introduction-header {
+    max-width: 100%;
+    /*padding: 30px;*/
+    /*text-align: center;*/
+}
+
+.intro-column {
+    padding: 0;
+}
+
+.project-container {
+    max-width: 350px;
+    margin: 10px;
+    background-color: #FCFBEE;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 20px 20px 80px;
 }
 
 .project-container .repo-link img {
@@ -41,6 +68,24 @@ COLOUR PALETTE
 .project-description {
     font-size: 16px;
     margin-bottom: 20px;
+}
+
+.action-row {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+
+@media (max-width: 767px) {
+    .profile-introduction {
+        margin: 15px 0;
+    }
+
+    .intro-column {
+        text-align: center;
+    }
 }
 
 /*.project-link {*/

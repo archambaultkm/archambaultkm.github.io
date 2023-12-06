@@ -12,7 +12,8 @@ body {
     height: 100%;
     background-size: cover;
     background-color: #DAC7C9;
-    font-family: 'Oswald', sans-serif;
+    color: #2c2a4a;
+    font-family: 'Georgia', sans-serif;
 }
 
 /* Header styles */
@@ -46,7 +47,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #32373B;
+    color: #2c2a4a;
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
