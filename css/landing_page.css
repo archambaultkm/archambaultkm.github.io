@@ -60,3 +60,29 @@
     font-weight: lighter;
     color: #ffffff;
 }
+
+@media (max-width: 767px) {
+    .landing-row {
+        flex-direction: column;
+    }
+
+    .landing-container {
+        text-align: center;
+    }
+
+    .landing-container,
+    .links,
+    .social-icons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    .social-icons * {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
