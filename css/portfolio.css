@@ -15,7 +15,7 @@ COLOUR PALETTE
     font-size: 18px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px #8A9BB1;
+    box-shadow: 0 0 5px #fff;
 }
 
 H3 {
@@ -39,15 +39,19 @@ H3 {
     background-color: #fff;
     /*background-color: #FCFBEE;*/
     border-radius: 8px;
-    box-shadow: 0 0 10px #8A9BB1;
+    box-shadow: 0 0 5px #fff;
     position: relative;
     padding: 20px 20px 80px;
 }
 
+.repo-link {
+    align-items: center;
+}
+
 .project-container .repo-link img {
     float: right;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .project-image {
@@ -74,15 +78,19 @@ H3 {
     bottom: 0;
     margin-bottom: 10px;
     width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @media (max-width: 767px) {
     .profile-introduction {
         margin: 15px 0;
+        text-align: center;
     }
 
     .intro-column {
-        text-align: center;
+        /*text-align: center;*/
     }
 }
 
