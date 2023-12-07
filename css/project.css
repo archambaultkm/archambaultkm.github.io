@@ -18,7 +18,7 @@ h2 {
 .project-container {
     color: #2c2a4a;
     max-width: 800px;
-    margin: 50px auto;
+    margin: 20px auto 50px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -48,7 +48,7 @@ h2 {
 }
 
 .project-image-sm {
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
     margin-bottom: 20px;
 }

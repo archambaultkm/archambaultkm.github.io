@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
     <link rel="manifest" href="../docs/site.webmanifest">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
     <title>RustWorld</title>
@@ -29,31 +30,195 @@
     <img src="../img/rustworld.png" alt="Project Image" class="project-image">
     <div class="project-title">RustWorld</div>
 
-    <p>Check back soon!</p>
+    <div class="project-links">
+        <a href = "https://github.com/archambaultkm/in1weekend" class="repo-link"> <img src="../img/github.png" alt="GitHub Icon" title="View the full source code"></a>
+    </div>
 
-<!--    <div class="project-description">-->
-<!--        <h2>Project Description</h2>-->
-<!--        <p>-->
-<!--            This is a placeholder project description. Include purpose, goals, and key features.-->
-<!--        </p>-->
-<!--    </div>-->
+    <div class="project-description">
+        <h2>Project Description</h2>
+        <p>
+            RustWorld is my most ambitious project to-date, and delves into the topics of rendering techniques and procedural generation. This program is capable of producing a
+            new world model at runtime based on a random seed and layered Perlin noise. The graphics rendering pipeline in RustWorld is built directly on the OpenGL API without any reliance
+            on wrappers or third-party libraries, and I wrote my own fragment and vertex shaders in GLSL to have control over the appearance of each cube. In my process described below, you'll see me progress
+            from rendering a simple triangle to the scene shown above.
+        </p>
+    </div>
 
-<!--    <div class="project-process">-->
-<!--        <h2>Project Process</h2>-->
-<!--        <p>-->
-<!--            Outline the steps and process followed during the project. Include challenges and how they were overcome.-->
-<!--        </p>-->
-<!--    </div>-->
+    <div class="project-process">
+        <h2>Project Process</h2>
+        <p>
+            This was my term project for "Emerging Technologies", a self-directed senior course aimed at researching and developing skills in modern programming fields. I am a dedicated lover of C++ and wanted to learn a new
+            low-level language, and <a href="https://www.rust-lang.org/">Rust</a> is booming in popularity right now, so I decided early on that I wanted to do whatever project I chose in Rust. After more thought, I landed on a Minecraft-style terrain generator, and I wanted to
+            create the graphics as "from-scratch" as possible.
+            <br> <br>
+            Below, I briefly cover the steps I took to achieve this program, but defining every single thing in detail would be extremely laborious to write and read.
+            If you want more information I encourage you to go and <a href="github.com/archambaultkm/RustWorld">look at the source code</a>.
+        </p>
+        <h3> Picking a rendering API </h3>
+        <p>
+            A rendering API is a set of tools that enable communication with a computer's graphics hardware. Two commonly considered options for a project are <a href="https://www.opengl.org/">OpenGL</a> and <a href="https://www.vulkan.org/">Vulkan</a>. After some research, I opted for OpenGL. OpenGL is generally considered more
+            beginner-friendly compared to Vulkan, which is acknowledged to be better suited for extremely demanding applications (which mine is not).
+        </p>
+        <h3> Creating a Window </h3>
+        <p>
+            OpenGL requires a window to draw in. My next research task was to choose a library that provided that functionality, as well as handling user input. I landed on <a href="https://docs.rs/glutin/latest/glutin/">Glutin</a>, a Rust library that
+            provides a cross-platform toolkit for OpenGL contexts.
+        </p>
+        <h3> Learning the Basics </h3>
+        <p>
+            Now I was finally ready to start drawing something! I started <a href="https://learnopengl.com/">following some tutorials</a> that led me through the process of drawing my first triangle, writing my first vertex and fragment shaders, loading textures, and applying transformations to a shape.
+        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/triangle.png" alt="camera1">
+                </div>
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/two_triangles.png" alt="camera2">
+                </div>
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/gradient_rectangle.png" alt="camera3">
+                </div>
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/transformed_textured_cube.png" alt="camera3">
+                </div>
+            </div>
+        </div>
 
-<!--    <div class="project-reflection">-->
-<!--        <h2>Project Reflection</h2>-->
-<!--        <p>-->
-<!--            Reflection on the overall project experience. Discuss what you learned, what you would do differently, and-->
-<!--            any future improvements or extensions to the project.-->
-<!--        </p>-->
-<!--    </div>-->
+        <h3> Creating a "World" </h3>
+        <h4> Cube<sup>(3)</sup> </h4>
+        <p>
+            As you can see above, I was now able to render one cube. But, my project requires <i>so many more</i> cubes. My initial attempts were pretty ham-fisted. Here
+            you can see my very first success with rendering a solid chunk of cubes. Here, I was explicitly defining each cube's position, defining a vertex buffer for
+            <i>every single cube</i>, and rendering each cube's face. You can probably imagine that this was extremely inefficient. From the wireframe (second photo), you can see
+            that a ridiculous amount of faces are being rendered that won't ever see the light of day.
+        </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/many_cubes.png" alt="camera1">
+                </div>
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/many_cubes_wire.png" alt="camera2">
+                </div>
+            </div>
+        </div>
+
+        <p>
+            My quick solution to this issue was to only render cubes that don't have neighbors on all 6 sides. "Inside" faces of each cube were still rendering needlessly, but with the time constraint
+            of the semester I had to make a call here to either spend a lot of time getting this one thing perfect, or get multiple elements going first and then come back and fix the little flaws- I chose the latter.
+        <br> <br>
+            To give some perspective, this is what I really wanted, using my initial Big Rectangle to illustrate: no more vertices than absolutely necessary-
+        </p>
+
+        <div class="final-result">
+            <img class="project-image-sm" src="../img/rustworld/ideal_mesh.jpg" alt="camera2">
+        </div>
+
+        <p>
+            In a <a href="https://en.wikipedia.org/wiki/Voxel">voxel</a>-based world, this technique is referred to as <a href="https://gedge.ca/blog/2014-08-17-greedy-voxel-meshing/">"greedy meshing"</a>. This is an algorithm used in computer graphics to
+            efficiently represent 3D terrain or objects. It operates by merging adjacent cubes of the same "type"" into larger, rectangular blocks, reducing the overall number of vertices needed to represent
+            the geometry. You then tile the appropriate texture over the new triangles to give the appearance that there are many cubes there.
+        </p>
+
+        <h4> Textures </h4>
+        <p>
+            In games with lots of different textures (like Minecraft), a commonly used technique is "texture atlasing" is employed that reduces the number of texture switches during rendering by packing every texture into one
+            consolidated image. I was really interested in implementing this in my model, so I started by using <a href="https://www.codeandweb.com/tp-online">this online tool</a> to pack my textures and generate an associated JSON
+            file. The JSON file held the coordinates of each image in the consolidated file. This was the result:
+        </p>
+        <div class="final-result">
+            <img class="project-image-sm" src="../img/rustworld/spritesheet.png" alt="camera2">
+        </div>
+
+        <p>
+            Then, I needed to associate each cube in the game with a "type" (I just used a simple enum), and sample the appropriate region of the texture atlas when it was that
+            cube's turn in the rendering pipeline.
+            <br>
+            Here's a mistake and a success that happened while I was trying to get the texture atlas working for the first time, on a chunk of "stone" type cubes- the mistake happened because I wasn't calculating
+            the coordinate offsets correctly and it ended up just printing the whole atlas on each cube:
+        </p>
+
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/mistake3.png" alt="camera2">
+                </div>
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/success.png" alt="camera2">
+                </div>
+            </div>
+        </div>
+
+        <p>
+            I eventually decided to do away with the serialized data in favour of handling the control flow in my fragment shader, since
+            I don't plan to introduce more textures to this model. <a href="https://github.com/archambaultkm/RustWorld/blob/master/shaders/shader.frag">Here's the shader</a> if you're curious.
+        </p>
+
+        <h4> Rendering Generated Terrain </h4>
+        <p>
+            I've talked a lot now about how I was drawing out each cube, but I haven't really outlined what it's all working towards. Here's a brief rundown of how a voxel-based
+            world like Minecraft or RustWorld generates terrain. A 3D space is divided into <i>volumetric elements</i>, each representing points in the environment. In this context,
+            a voxel is a cube. Then, a noise algorithm is applied (I exclusively used <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin noise</a>, but other types are widely used and layered)
+            to determine the types/heights of elements within the voxel grid. When you look at Minecraft, for example, there is no "empty space". The air is all cubes too, because the whole
+            thing is a 3D grid of them.
+            <br><br>
+            For chunk generation in RustWorld, cube types are determined by the noise value generated for that position in the chunk grid, and the type and location of each cube is passed to an OpenGL draw call. This means that the world is immutable, but achieves my goal of rendering a
+            terrain model. I didn't realize in my first attempts that you were supposed to use the same seed to generate noise for anything meant to be connected, so I was confused that I started out
+            with harsh lines between each chunk when I started terrain generation:
+        </p>
+
+        <div class="final-result">
+            <img class="project-image-sm" src="../img/rustworld/seams.png" alt="seams">
+        </div>
+
+        <p>
+            With the revelation of using the same seed across all chunks, I started to be really happy with the results.
+        </p>
+
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/ex1.png" alt="camera2">
+                </div>
+                <div class="col-md-6">
+                    <img class="project-image-sm" src="../img/rustworld/ex2.png" alt="camera2">
+                </div>
+            </div>
+        </div>
+
+        <p>
+            To wrap up, I spent some time tuning my noise generation and layering different granularity to achieve terrain that looked a bit more interesting. The
+            rolling curves were ok, but I wanted better. I also added a guaranteed "floor" of stone at level 0 of the world so that it looked more like solid ground,
+            and less like floating islands. Here is a model generated after that tuning:
+        </p>
+
+        <div class="final-result">
+            <img class="project-image" src="../img/rustworld/final3.png" alt="camera2">
+        </div>
+
+    </div>
+
+    <div class="project-reflection">
+        <h2>Project Reflection</h2>
+        <p>
+            Even though there is definitely room for improvement in some areas, I am extremely proud of this project. I'm really glad that I chose to learn the whole rendering
+            pipeline process, and that I can easily follow through the stages in my code.
+            <br><br>
+            In terms of what I would do differently, one thought prevailed the entire time I worked on this: I should have learned Rust and OpenGL separately before attempting a project that used both.
+            Since OpenGL is primarily a C++ library, the absence of a wrapper or an abstraction layer poses challenges when integrating it with Rust, as ensuring
+            safety becomes less straightforward. In retrospect, I see that attempting to learn both simultaneously made the learning process more challenging
+            than necessary.
+
+
+        </p>
+    </div>
 </div>
 
+<button onclick="scrollToTop()" id="backToTopBtn" title="Back To Top">Top</button>
+
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../scripts/general.js"></script>
 </body>
 
 </html>
