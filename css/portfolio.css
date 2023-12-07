@@ -13,7 +13,6 @@ COLOUR PALETTE
     padding: 20px;
     margin: 20px 25px;
     font-size: 18px;
-    /*background: #FCFBEE;*/
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px #8A9BB1;
@@ -76,7 +75,6 @@ H3 {
     margin-bottom: 10px;
     width: 80%;
 }
-
 
 @media (max-width: 767px) {
     .profile-introduction {

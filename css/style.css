@@ -21,12 +21,12 @@ body {
 header {
     margin-top: 10px;
     background-color: #8A9BB1;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 0 5px #2c2a4a;
 }
 
 /* Navigation styles */
@@ -93,6 +93,7 @@ button {
     padding: 10px 20px;
     border: none;
     margin-top: 15px;
+    margin-bottom: 10px;
     font-family: 'Oswald', sans-serif;
     border-radius: 4px;
     background: #E34A6F;
