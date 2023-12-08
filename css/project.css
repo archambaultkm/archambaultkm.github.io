@@ -10,7 +10,7 @@ COLOUR PALETTE
 */
 
 h2 {
-    color: #8A9BB1;
+    color: var(--site-h2);
     width: auto;
     border-bottom: none;
 }

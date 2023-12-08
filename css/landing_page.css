@@ -1,3 +1,5 @@
+@import "variables.css";
+
 html, body {
     margin: 0;
     height: 100%;
@@ -14,14 +16,14 @@ html, body {
 
 .links a {
     text-decoration: none;
-    color: #E34A6F;
+    color: var(--landing-link);
     font-size: 75px;
     margin: 5px;
 }
 
 .links a:hover {
     text-decoration: none;
-    color: #EDEBA0;
+    color: var(--landing-link-highlight);
 }
 
 .landing-container {
@@ -54,7 +56,7 @@ html, body {
 }
 
 .name {
-    color: #2c2a4a;
+    color: var(--name);
     font-size: 5.5em;
     font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
 }
@@ -64,7 +66,7 @@ html, body {
     font-family: 'Oswald', sans-serif;
     margin: 5px 0;
     font-weight: lighter;
-    color: #ffffff;
+    color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -101,8 +103,6 @@ html, body {
     }
 
     .links a {
-        text-decoration: none;
-        color: #E34A6F;
         font-size: 2.5em;
         margin: 5px;
     }

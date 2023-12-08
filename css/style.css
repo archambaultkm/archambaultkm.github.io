@@ -1,18 +1,12 @@
-/* 
-COLOUR PALETTE
-#32373B onyx
-#BCABAE rose quartz
-#8075FF medium slate blue
-#E34A6F cerise
-#EDEBA0 vanilla
-*/
+@import "variables.css";
 
 body {
     margin: 0;
     height: 100%;
     background-size: cover;
-    background-color: #e5ced0;
-    color: #2c2a4a;
+    background-color: var(--site-background);
+    background-image: linear-gradient(var(--vanilla), var(--cream));
+    color: var(--site-text);
     font-family: 'Palatino Linotype', sans-serif;
     padding-bottom: 40px;
 }
@@ -20,13 +14,13 @@ body {
 /* Header styles */
 header {
     margin-top: 10px;
-    background-color: #8A9BB1;
+    background-color: var(--header);
     padding: 15px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 0 5px #2c2a4a;
+    box-shadow: 0 0 5px var(--header-shadow);
 }
 
 /* Navigation styles */
@@ -48,7 +42,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #2c2a4a;
+    color: var(--header-link);
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -57,7 +51,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #EDEBA0;
+    color: var(--header-link-hover);
 }
 
 .nav-links img {
@@ -79,8 +73,8 @@ h2 {
     margin: 10px 0;
     padding-bottom: 10px;
     width: 180px;
-    color: #E34A6F;
-    border-bottom: 3px solid #BCABAE;
+    color: var(--site-h2);
+    border-bottom: 3px solid var(--underline);
 }
 
 
@@ -95,7 +89,7 @@ button {
     margin-top: 15px;
     margin-bottom: 10px;
     border-radius: 4px;
-    background: #E34A6F;
+    background: var(--btn-primary);
     color: #fff;
     cursor: pointer;
     transition: all 0.3s;
@@ -104,17 +98,17 @@ button {
 button a {
     font-family: 'Book Antiqua', sans-serif;
     font-size: 18px;
-    color: #ffffff;
+    color: #fff;
 }
 
 button:hover {
-    background-color: #F36D8F;
+    background-color: var(--btn-primary-hightlight);
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
 }
 
 button:hover a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 

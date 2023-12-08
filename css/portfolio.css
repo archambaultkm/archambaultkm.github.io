@@ -1,25 +1,17 @@
-/*
-COLOUR PALETTE
-#32373B onyx
-#BCABAE rose quartz
-#8075FF medium slate blue
-#E34A6F cerise
-#F36D8F cerise highlight
-#EDEBA0 vanilla
-*/
+@import "variables.css";
 
 .profile-introduction {
     text-align: left;
     padding: 20px;
     margin: 20px 25px;
     font-size: 18px;
-    background-color: #fff;
+    background-color: var(--card-background);
     border-radius: 8px;
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px var(--taupe);;
 }
 
 H3 {
-    color: #E34A6F;
+    color: var(--site-h2);
 }
 .profile-introduction .container {
     max-width: 100%;
@@ -29,6 +21,10 @@ H3 {
     max-width: 100%;
 }
 
+.introduction-header h1 {
+    color: var(--site-h1);
+}
+
 .intro-column {
     padding: 0;
 }
@@ -36,10 +32,10 @@ H3 {
 .project-container {
     max-width: 350px;
     margin: 10px;
-    background-color: #fff;
+    background-color: var(--card-background);
     /*background-color: #FCFBEE;*/
     border-radius: 8px;
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px var(--taupe);
     position: relative;
     padding: 20px 20px 80px;
 }
@@ -63,6 +59,7 @@ H3 {
 }
 
 .project-title {
+    color: var(--site-h2);
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -88,16 +85,4 @@ H3 {
         margin: 15px 0;
         text-align: center;
     }
-
-    .intro-column {
-        /*text-align: center;*/
-    }
 }
-
-/*.project-link {*/
-
-/*}*/
-
-/*.project-link:hover {*/
-/*    */
-/*}*/
