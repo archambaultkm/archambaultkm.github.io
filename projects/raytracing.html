@@ -37,18 +37,27 @@
 
         <div class="project-description">
             <h2>Project Description</h2>
+            <h3> What is Ray Tracing? </h3>
+            <p>
+                <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">Ray tracing</a> is a rendering technique used in computer graphics to simulate the way light
+                interacts with objects in a scene. It traces the path of rays of light as they travel through a virtual environment, accounting for reflections, refractions, and shadows.
+                Ray tracing is computationally demanding, but is used widely in fields like CGI for film, video game graphics, and architectural visualization.
+            </p>
+            <h3> The Project </h3>
             <p>
                 This project was based off of the textbook <a href = "https://raytracing.github.io/books/RayTracingInOneWeekend.html">Ray Tracing in One Weekend</a> by Peter Shirley.
+                The textbook guides you through the implementation of a simple ray tracer in C++. The ray tracer generates PPM (Portable Pixel Map) image files .png versions of which you're seeing
+                on this page.
                 <br><br>
                 I started this project in my third week of learning the Rust programming language. This was meant to be an exercise to get more familiar with
-                Rust, try my hand at porting code from one language to another, and to learn some basics of ray tracing, a
-                computer graphics rendering technique that I’ve always found interesting.
+                Rust, try my hand at porting code from one language to another, and to learn some basics of ray tracing.
 
             </p>
         </div>
 
         <div class="project-process">
             <h2>Project Process</h2>
+            <h3>Drawing the first shapes</h3>
             <p>
                 I took a week to go through the book and port each chapter to Rust code. I really enjoyed getting to see progress with each chapter I got through:
                 what started as a blue-to-white gradient image eventually turned into multiple spheres of various materials and sizes. Here are a collection of screenshots I
@@ -71,7 +80,7 @@
                 </div>
             </div>
             <p>
-                Then, I added a "ground" and an antialiasing effect by taking random samples nearby a generated pixel. Note that
+                Then, we add a "ground" and an antialiasing effect (check the second image, it's much smoother than the first) by taking random samples nearby a generated pixel. Note that
                 I adjusted the base colours, but the gradient you see in both the sphere and the ground is still based on the surface normals
                 of the shape:
             </p>
@@ -85,25 +94,25 @@
                     </div>
                 </div>
             </div>
+            <h3> Materials </h3>
             <p>
-                Adding a matte (Lambertian) material that can be applied to shapes, and noise reduction in the generated image. Now that
-                we have an actual material, the colour is whatever we want (I chose gray):
+                Some of the next steps involved defining different materials in code and getting to see how the rays interacted
+                with the environment. The three materials covered in the textbook are Lambertian, Metal, and Dielectric.
+                <br><br>
+                A <a href="https://en.wikipedia.org/wiki/Lambertian_reflectance">Lambertian</a> material
+                is diffuse and scatters light evenly in all directions. Its appearance is matte and is commonly used
+                for simulating surfaces like paper. Here is how this looks on my spheres:
             </p>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap9.png" alt="matte">
-                    </div>
-                    <div class="col-md-6">
-                        <img class="project-image-sm" src="../img/ray-tracing/scene_chap9-low_spp.png" alt="noisy">
-                    </div>
-                    <div class="col-md-6">
+                    <div class="final-result">
                         <img class="project-image-sm" src="../img/ray-tracing/scene_chap9-no_acne.png" alt="no shadow acne">
                     </div>
                 </div>
             </div>
             <p>
-                Adding more materials: Metal (with adjustable reflectivity/fuzz!) and Glass, with more exciting colours:
+                Metal, as you know, is reflective. An extra parameter was added to this material in the code that affects the
+                "pebbling" or "fuzz" of the metal, resulting in spheres with varying mirroring.
             </p>
             <div class="container">
                 <div class="row">
@@ -113,6 +122,15 @@
                     <div class="col-md-6">
                         <img class="project-image-sm" src="../img/ray-tracing/scene_chap10-fuzz.png" alt="glass">
                     </div>
+                </div>
+            </div>
+            <p>
+                A <a href="https://en.wikipedia.org/wiki/Dielectric">Dielectric</a> material is insulating, or a poor conductor of electric current. In ray tracing, though,
+                dielectrics often refer to transparent materials such as glass. They both reflect and refract light- below are tow examples. One sphere flips the reflections of
+                its surroundings upside down within itself, and the other is clear.
+            </p>
+            <div class="container">
+                <div class="row">
                     <div class="col-md-6">
                         <img class="project-image-sm" src="../img/ray-tracing/scene_chap11-high_sample_count.png" alt="no shadow acne">
                     </div>
@@ -121,8 +139,11 @@
                     </div>
                 </div>
             </div>
+            <h3>
+                Positionable camera
+            </h3>
             <p>
-                Positionable camera:
+                <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html#positionablecamera">I'm not going to attempt explaining this one.</a> But, here are the results:
             </p>
             <div class="container">
                 <div class="row">
@@ -138,7 +159,7 @@
                 </div>
             </div>
             <p>
-                And a final rendering:
+                And a final rendering, bringing all the elements together:
             </p>
             <div class="final-result">
             <img class="project-image" src="../img/ray-tracing/scene_1.png" alt="final">
