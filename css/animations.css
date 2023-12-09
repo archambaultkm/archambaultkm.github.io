@@ -1,0 +1,11 @@
+@keyframes bob-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px); /* Adjust the vertical movement as needed */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

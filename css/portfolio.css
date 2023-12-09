@@ -2,7 +2,7 @@
 
 .profile-introduction {
     text-align: left;
-    padding: 20px;
+    padding: 25px 40px;
     margin: 20px 25px;
     font-size: 18px;
     background-color: var(--card-background);
@@ -33,11 +33,15 @@ H3 {
     max-width: 350px;
     margin: 10px;
     background-color: var(--card-background);
-    /*background-color: #FCFBEE;*/
     border-radius: 8px;
     box-shadow: 0 0 5px var(--taupe);
     position: relative;
     padding: 20px 20px 80px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.project-container:hover {
+    transform: scale(1.02);
 }
 
 .repo-link {
@@ -83,6 +87,6 @@ H3 {
 @media (max-width: 767px) {
     .profile-introduction {
         margin: 15px 0;
-        text-align: center;
+        /*text-align: center;*/
     }
 }
