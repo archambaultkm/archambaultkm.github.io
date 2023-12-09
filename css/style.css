@@ -45,7 +45,7 @@ header {
     color: var(--header-link);
     font-size: 20px;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.1s ease-in-out;
     display: flex;
     align-items: center;
 }
@@ -131,6 +131,14 @@ button:hover a {
     padding: 10px 15px;
     cursor: pointer;
     font-size: 24px;
+}
+
+.repo-link img {
+    transition: 0.3s ease-in-out;
+}
+
+.repo-link img:hover {
+    transform: scale(1.15);
 }
 
 @media (max-width: 767px) {

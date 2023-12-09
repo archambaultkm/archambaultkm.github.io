@@ -82,6 +82,14 @@ html, body {
     color: #fff;
 }
 
+.social-icons img {
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
 @media (max-width: 767px) {
 
     .name {

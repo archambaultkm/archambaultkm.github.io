@@ -50,7 +50,8 @@
                 on this page.
                 <br><br>
                 I started this project in my third week of learning the Rust programming language. This was meant to be an exercise to get more familiar with
-                Rust, try my hand at porting code from one language to another, and to learn some basics of ray tracing.
+                Rust, try my hand at porting code from one language to another, and to learn some basics of ray tracing. I took a week to go through the book and port each chapter to Rust code. I really enjoyed getting to see progress with each chapter I got through:
+                what started as a blue-to-white gradient image eventually turned into multiple spheres of various materials and sizes.
 
             </p>
         </div>
@@ -59,12 +60,8 @@
             <h2>Project Process</h2>
             <h3>Drawing the first shapes</h3>
             <p>
-                I took a week to go through the book and port each chapter to Rust code. I really enjoyed getting to see progress with each chapter I got through:
-                what started as a blue-to-white gradient image eventually turned into multiple spheres of various materials and sizes. Here are a collection of screenshots I
-                took of my work:
-
-                First steps: generating a gradient white-to-blue sky background, communicate to the ray tracer the position of a sphere based on it’s center, display different colours across the
-                surface of the sphere based on its surface normal:
+                First steps: generate a gradient white-to-blue sky background, communicate to the ray tracer the position of a sphere based on it’s center, display different colours across the
+                surface of the sphere based on the <a href="https://mathworld.wolfram.com/NormalVector.html#:~:text=The%20normal%20vector%2C%20often%20simply,pointing%20normal%20are%20usually%20distinguished."> normal.</a>
             </p>
             <div class="container">
                 <div class="row">
@@ -80,7 +77,7 @@
                 </div>
             </div>
             <p>
-                Then, we add a "ground" and an antialiasing effect (check the second image, it's much smoother than the first) by taking random samples nearby a generated pixel. Note that
+                Then, we add a "ground" and an <a href="https://en.wikipedia.org/wiki/Multisample_anti-aliasing">antialiasing</a> effect (check the second image, it's much smoother than the first) by taking random samples nearby a generated pixel. Note that
                 I adjusted the base colours, but the gradient you see in both the sphere and the ground is still based on the surface normals
                 of the shape:
             </p>
@@ -111,8 +108,8 @@
                 </div>
             </div>
             <p>
-                Metal, as you know, is reflective. An extra parameter was added to this material in the code that affects the
-                "pebbling" or "fuzz" of the metal, resulting in spheres with varying mirroring.
+                Metal, in this context, is opaque and reflective. An extra parameter was added to this material in the code that affects the
+                smoothness or "fuzz" of the metal, resulting in spheres with varying reflective sharpness.
             </p>
             <div class="container">
                 <div class="row">
@@ -126,7 +123,7 @@
             </div>
             <p>
                 A <a href="https://en.wikipedia.org/wiki/Dielectric">Dielectric</a> material is insulating, or a poor conductor of electric current. In ray tracing, though,
-                dielectrics often refer to transparent materials such as glass. They both reflect and refract light- below are tow examples. One sphere flips the reflections of
+                dielectrics often refer to transparent materials such as glass. They both reflect and refract light- below are two examples. One sphere flips the reflections of
                 its surroundings upside down within itself, and the other is clear.
             </p>
             <div class="container">
