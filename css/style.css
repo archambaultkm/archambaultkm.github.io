@@ -5,7 +5,7 @@ body {
     height: 100%;
     background-size: cover;
     background-color: var(--site-background);
-    background-image: linear-gradient(var(--vanilla), var(--cream));
+    background-image: linear-gradient(var(--nostalgic-blue), var(--vanilla-lite));
     color: var(--site-text);
     font-family: 'Palatino Linotype', sans-serif;
     padding-bottom: 40px;
@@ -13,7 +13,6 @@ body {
 
 /* Header styles */
 header {
-    margin-top: 10px;
     background-color: var(--header);
     padding: 15px 0;
     text-align: center;
@@ -88,7 +87,7 @@ button {
     background: var(--btn-primary);
     color: #fff;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s ease-in-out;
 }
 
 button a {
@@ -101,6 +100,7 @@ button:hover {
     background-color: var(--btn-primary-hightlight);
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
+    transform: scale(1.05);
 }
 
 button:hover a {
@@ -142,6 +142,11 @@ button:hover a {
 }
 
 @media (max-width: 767px) {
+    .nav-links {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #backToTopBtn {
         bottom: 10px;
         right: 15px;

@@ -16,10 +16,10 @@ h2 {
 }
 
 .project-container {
+    max-width: 55%;
     color: #2c2a4a;
-    max-width: 800px;
     margin: 20px auto 50px;
-    background-color: #fff;
+    background-color: var(--card-background);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

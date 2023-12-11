@@ -1,32 +1,7 @@
 @import "variables.css";
 
-.profile-introduction {
-    text-align: left;
-    padding: 25px 40px;
-    margin: 20px 25px;
-    font-size: 18px;
-    background-color: var(--card-background);
-    border-radius: 8px;
-    box-shadow: 0 0 5px var(--taupe);;
-}
-
 H3 {
     color: var(--site-h2);
-}
-.profile-introduction .container {
-    max-width: 100%;
-}
-
-.introduction-header {
-    max-width: 100%;
-}
-
-.introduction-header h1 {
-    color: var(--site-h1);
-}
-
-.intro-column {
-    padding: 0;
 }
 
 .project-container {
@@ -40,9 +15,9 @@ H3 {
     transition: transform 0.2s ease-in-out;
 }
 
-.project-container:hover {
-    transform: scale(1.02);
-}
+/*.project-container:hover {*/
+/*    transform: scale(1.02);*/
+/*}*/
 
 .repo-link {
     align-items: center;
@@ -82,11 +57,4 @@ H3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-@media (max-width: 767px) {
-    .profile-introduction {
-        margin: 15px 0;
-        /*text-align: center;*/
-    }
 }

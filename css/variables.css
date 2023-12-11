@@ -4,7 +4,7 @@
     --off-black-lite: #671010;
     --taupe: #8d6f57;
     --vanilla: #d8d0c5;
-    --vanilla-lite: rgba(255, 250, 238, 0.85);
+    --vanilla-lite: rgb(246, 244, 240);
     --cream: #d9c4a9;
     --gold: #d9b061;
 
@@ -16,6 +16,7 @@
     /*--vanilla: #EDEBA0;*/
     --dark-slate-blue: #2c2a4a;
     --nostalgic-blue: #8A9BB1;
+    --nostalgic-blue-dark: #778fab;
 
 
     /*--btn-primary: var(--cerise);*/
@@ -34,23 +35,23 @@
     /*--landing-link: var(--cerise);*/
     /*--landing-link-highlight: var(--vanilla);*/
 
-    --btn-primary: var(--off-black-lite);
-    --btn-primary-hightlight: var(--nostalgic-blue);
+    --btn-primary: var(--off-black);
+    --btn-primary-hightlight: var(--off-black-lite);
 
-    --site-background: var(--vanilla);
+    --site-background: var(--nostalgic-blue);
     --site-text: var(--off-black);
     --site-h1: var(--off-black-lite);
     --site-h2: var(--off-black-lite);
     --underline: var(--cream);
 
-    --header: var(--vanilla);
+    --header: var(--vanilla-lite);
     --header-link: var(--off-black);
     --header-link-hover: var(--off-black-lite);
     --header-shadow: var(--taupe);
 
     --name: var(--off-black);
     --landing-link: var(--off-black);
-    --landing-link-highlight: var(--nostalgic-blue);
+    --landing-link-highlight: var(--off-black-lite);
 
     --bg-white: var(--gold);
     /*--card-background: var(rgba(0, 0, 0, 0));*/
