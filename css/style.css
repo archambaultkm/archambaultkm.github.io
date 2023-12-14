@@ -28,6 +28,10 @@ header {
     display: inline-block;
 }
 
+.disable {
+
+}
+
 .nav-links ul {
     list-style-type: none;
     margin: 0;
