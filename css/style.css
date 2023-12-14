@@ -5,7 +5,8 @@ body {
     height: 100%;
     background-size: cover;
     background-color: var(--site-background);
-    background-image: linear-gradient(var(--nostalgic-blue), var(--vanilla-lite));
+    /*background-image: linear-gradient(var(--nostalgic-blue), var(--vanilla-lite));*/
+    background-image: url("../img/ray-tracing/sky_scene.png");
     color: var(--site-text);
     font-family: 'Palatino Linotype', sans-serif;
     padding-bottom: 40px;
@@ -147,8 +148,12 @@ button:hover a {
         padding-right: 10px;
     }
 
+    .nav-links a {
+        font-size: 16px;
+    }
+
     #backToTopBtn {
         bottom: 10px;
-        right: 15px;
+        right: 20px;
     }
 }

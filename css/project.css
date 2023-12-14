@@ -16,13 +16,12 @@ h2 {
 }
 
 .project-container {
-    max-width: 55%;
-    color: #2c2a4a;
+    max-width: 75%;
     margin: 20px auto 50px;
     background-color: var(--card-background);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--header-shadow);
 }
 
 .project-links img {
@@ -64,4 +63,11 @@ h2 {
 .project-reflection {
     font-size: 16px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .project-container {
+        margin-top: 0;
+        max-width: 100%;
+    }
 }

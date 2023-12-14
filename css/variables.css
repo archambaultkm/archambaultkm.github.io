@@ -15,7 +15,7 @@
     --light-cerise: #F36D8F;
     /*--vanilla: #EDEBA0;*/
     --dark-slate-blue: #2c2a4a;
-    --nostalgic-blue: #8A9BB1;
+    --nostalgic-blue: #b2d1fa;
     --nostalgic-blue-dark: #778fab;
 
 
@@ -38,13 +38,13 @@
     --btn-primary: var(--off-black);
     --btn-primary-hightlight: var(--off-black-lite);
 
-    --site-background: var(--nostalgic-blue);
+    --site-background: var(--vanilla-lite);
     --site-text: var(--off-black);
     --site-h1: var(--off-black-lite);
     --site-h2: var(--off-black-lite);
     --underline: var(--cream);
 
-    --header: var(--vanilla-lite);
+    --header: #FFFFFF;
     --header-link: var(--off-black);
     --header-link-hover: var(--off-black-lite);
     --header-shadow: var(--taupe);
@@ -55,5 +55,5 @@
 
     --bg-white: var(--gold);
     /*--card-background: var(rgba(0, 0, 0, 0));*/
-    --card-background: var(--vanilla-lite);
+    --card-background: #FFFFFF;
 }
