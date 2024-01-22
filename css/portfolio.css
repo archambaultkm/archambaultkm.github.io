@@ -7,17 +7,18 @@ H3 {
 .project-container {
     max-width: 350px;
     margin: 10px;
-    background-color: var(--card-background);
-    border-radius: 8px;
-    box-shadow: 0 0 5px var(--taupe);
     position: relative;
     padding: 20px 20px 80px;
     transition: transform 0.2s ease-in-out;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(15px);
 }
 
-/*.project-container:hover {*/
-/*    transform: scale(1.02);*/
-/*}*/
 
 .repo-link {
     align-items: center;
@@ -31,10 +32,11 @@ H3 {
 
 .project-image {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 200px;
+    object-fit: contain;
     border-radius: 4px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .project-title {

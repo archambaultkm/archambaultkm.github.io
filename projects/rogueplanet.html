@@ -30,28 +30,46 @@
     <img src="../img/rogueplanet-above-ground.png" alt="Project Image" class="project-image">
     <div class="project-title">Rogue Planet</div>
 
-    <p>Check back soon!</p>
+    <div class="project-description">
+        <h2>Project Description</h2>
+        <p>
+            Rogue Planet was built as a capstone project by myself, <a href="https://sarahannealice.netlify.app/projects">Sarah Newman</a>, <a href="https://www.ewanbaxter.ca/">Ewan Baxter</a>, and <a href="https://rhend.netlify.app/">Riley Pike</a>.
+            <br><br>
+            In this game built using the Unity game engine, you play as a stranded explorer whose ship is no longer space-worthy. At night the vicious endemic creatures
+            attack you relentlessly, and during the day the planet's scorching sun forces you underground where you have to mine for materials to
+            repair your ship with.
+        </p>
+    </div>
 
-<!--    <div class="project-description">-->
-<!--        <h2>Project Description</h2>-->
-<!--        <p>-->
-<!--            Rogue Planet was built as a capstone project by myself-->
-<!--        </p>-->
-<!--    </div>-->
+    <div class="project-process">
+        <h2>Project Process</h2>
+        <p>
+            My little niche in the project was the enemies. I had wanted to play around with different enemy types and ai. I began by
+            creating a base class structure for all enemies, then branching that out into melee and ranged types. I was very ambitious at the beginning,
+            wanting to incorporate lots more creature types (flying, burrowing, etc.), but with time constraints I chose to just polish the simpler types first.
+            <br><br>
+            I learned about simple mechanics to write into enemy behaviour, such as pursuing the player and standing in range to fire (for ranged enemies). I also worked
+            on making an enemy spawner whose parameters (spawn rate, enemy type) were easily tweak-able using a custom editor menu.
+            <br><br>
+            Something I think worth mentioning is that the class structure of the enemies, and the design of the spawners to use an
+            instance of an enemy to determine the spawn type, were inspired by the example from <a href="https://gameprogrammingpatterns.com/prototype.html">Prototype pattern</a>
+             in <a href="https://gameprogrammingpatterns.com">Game Programming Patterns</a>.
+            <br><br>
+            Another piece I worked on was designing the game's health system. I designed game components for both Health and Attack data,
+            to be attached to anything that could take and/or deal damage. I then required trigger colliders for anything these components were attached to,
+            so that the damage logic could come into effect on the trigger.
 
-<!--    <div class="project-process">-->
-<!--        <h2>Project Process</h2>-->
-<!--        <p>-->
-<!--            Outline of steps, challenges, and processes followed during the project.-->
-<!--        </p>-->
-<!--    </div>-->
+        </p>
+    </div>
 
-<!--    <div class="project-reflection">-->
-<!--        <h2>Project Reflection</h2>-->
-<!--        <p>-->
-<!--            Reflection on the overall project experience.-->
-<!--        </p>-->
-<!--    </div>-->
+    <div class="project-reflection">
+        <h2>Project Reflection</h2>
+        <p>
+            This project was all of our first real experience creating a game together, and even though we only had 3 months
+            to work on this I think we're all extremely proud of the final product. We communicated well as a team and
+            everybody pulled their weight, resulting in one of the most fun projects I've worked on yet as a developer.
+        </p>
+    </div>
 </div>
 
 </body>

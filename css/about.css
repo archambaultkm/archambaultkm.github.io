@@ -29,6 +29,22 @@ html, body {
     padding: 0;
 }
 
+.about-btn {
+    background-color: var(--card-background);
+    border: 2px solid var(--btn-primary);
+    color: var(--site-text);
+}
+
+.about-btn a, .about-btn:hover a {
+    color: var(--site-text);
+    font-size: 26px;
+}
+
+.about-btn:hover {
+    background-color: var(--card-background);
+    border: 2px solid var(--btn-primary);
+}
+
 @media (max-width: 767px) {
     html, body {
         height: auto;
